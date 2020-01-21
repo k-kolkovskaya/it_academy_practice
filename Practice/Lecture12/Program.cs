@@ -7,10 +7,11 @@ namespace Lecture12
         static void Main(string[] args)
         {
             Base base1 = new Base(12);
+            Console.WriteLine(base1.Side);
 
             for (int i = 0; i < base1.CreateFigures().Length; i++)
             {
-                Console.WriteLine();
+                Console.WriteLine(base1.CreateFigures()[i]);
             }
         }
     }

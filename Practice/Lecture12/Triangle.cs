@@ -6,13 +6,13 @@ namespace Lecture12
 {
     class Triangle : Base
     {
-        private int Side;
-        public Triangle(int side)
+        public string Name { get; set; } = "triangle";
+        public Triangle(int side) : base(side)
         {
-            Side = side;
+            
         }
 
-        public double TriangleSquare ()
+        public double GetSquare()
         {
             return ((Math.Sqrt(3) / 4) * Math.Pow(Side, 2));
         }

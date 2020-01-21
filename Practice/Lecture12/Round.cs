@@ -6,13 +6,13 @@ namespace Lecture12
 {
     class Round : Base
     {
-        private int Side;
-        public Round(int side)
+        public string Name { get; set; } = "round";
+        public Round(int side) : base(side)
         {
-            Side = side;
+            
         }
 
-        public double RoundSquare()
+        public double GetSquare()
         {
             return ((Math.PI) * Math.Pow(Side, 2));
         }

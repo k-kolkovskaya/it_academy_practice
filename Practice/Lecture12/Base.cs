@@ -6,19 +6,19 @@ namespace Lecture12
 {
     class Base
     {
-        public int Number;
+        public int Side { get; set; }
 
-        public Base (int number)
+        public Base (int side)
         {
-            Number = number;
+            Side = side;
         }
-        public object[] CreateFigures()
+        public virtual object[] CreateFigures()
         {
-            Round round = new Round(Number);
-            Round round1 = new Round(Number);
-            Triangle triangle = new Triangle(Number);
-            Triangle triangle1 = new Triangle(Number);
-            Square square = new Square(Number);
+            Round round = new Round(Side);
+            Round round1 = new Round(Side);
+            Triangle triangle = new Triangle(Side);
+            Triangle triangle1 = new Triangle(Side);
+            Square square = new Square(Side);
 
             object[] figureObject =  { round, round1, triangle, triangle1, square };
             
