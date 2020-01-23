@@ -6,15 +6,14 @@ namespace Lecture12
 {
     class Triangle : Base
     {
-        public string Name { get; set; } = "triangle";
-        public Triangle(int side) : base(side)
+        public Triangle(int side) : base(side, "triangle")
         {
             
         }
 
-        public double GetSquare()
+        public override double GetSquare()
         {
-            return ((Math.Sqrt(3) / 4) * Math.Pow(Side, 2));
+            return Math.Round(((Math.Sqrt(3) / 4) * Math.Pow(Side, 2)), 3);
         }
     }
 }

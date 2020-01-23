@@ -6,12 +6,19 @@ namespace Lecture12
     {
         static void Main(string[] args)
         {
-            Base base1 = new Base(12);
-            Console.WriteLine(base1.Side);
+            Base round1 = new Round(10);
+            Base round2 = new Round(2);
+            Base triangle = new Triangle(1);
+            Base triangle1 = new Triangle(3);
+            Base square = new Square(9);
 
-            for (int i = 0; i < base1.CreateFigures().Length; i++)
+            Console.WriteLine(round1.Name);
+
+            Base[] figureObject = { round1, round2, triangle, triangle1, square };
+
+            foreach (Base item in figureObject)
             {
-                Console.WriteLine(base1.CreateFigures()[i]);
+                Console.WriteLine($"This is {item.Name}. CLR Type is {item.ToString()}. Square is {item.GetSquare()}");
             }
         }
     }

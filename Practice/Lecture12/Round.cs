@@ -6,15 +6,14 @@ namespace Lecture12
 {
     class Round : Base
     {
-        public string Name { get; set; } = "round";
-        public Round(int side) : base(side)
+        public Round(int side) : base(side, "round")
         {
             
         }
 
-        public double GetSquare()
+        public override double GetSquare()
         {
-            return ((Math.PI) * Math.Pow(Side, 2));
+            return Math.Round(((Math.PI) * Math.Pow(Side, 2)), 3);
         }
     }
 }

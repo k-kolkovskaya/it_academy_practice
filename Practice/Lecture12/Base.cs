@@ -6,23 +6,19 @@ namespace Lecture12
 {
     class Base
     {
+        public int Square { get; set; }
         public int Side { get; set; }
+        public virtual string Name { get; set; }
 
-        public Base (int side)
+        public Base (int side, string name)
         {
             Side = side;
+            Name = name;
         }
-        public virtual object[] CreateFigures()
-        {
-            Round round = new Round(Side);
-            Round round1 = new Round(Side);
-            Triangle triangle = new Triangle(Side);
-            Triangle triangle1 = new Triangle(Side);
-            Square square = new Square(Side);
 
-            object[] figureObject =  { round, round1, triangle, triangle1, square };
-            
-            return figureObject;
+        public virtual double GetSquare()
+        {
+            return Square;
         }
     }
 }

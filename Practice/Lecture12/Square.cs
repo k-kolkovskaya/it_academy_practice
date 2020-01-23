@@ -6,15 +6,14 @@ namespace Lecture12
 {
     class Square : Base
     {
-        public string Name { get; set; } = "square";
-        public Square(int side) : base(side)
+        public Square(int side) : base(side, "square")
         {
             
         }
 
-        public double GetSquare()
+        public override double GetSquare()
         {
-            return (Math.Pow(Side, 2));
+            return Math.Round((Math.Pow(Side, 2)), 3);
         }
     }
 }
