@@ -8,7 +8,7 @@ namespace Lecture12
     {
         public int Square { get; set; }
         public int Side { get; set; }
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
 
         public Base (int side, string name)
         {

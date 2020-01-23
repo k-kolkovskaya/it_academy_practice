@@ -6,13 +6,11 @@ namespace Lecture12
     {
         static void Main(string[] args)
         {
-            Base round1 = new Round(10);
-            Base round2 = new Round(2);
-            Base triangle = new Triangle(1);
-            Base triangle1 = new Triangle(3);
-            Base square = new Square(9);
-
-            Console.WriteLine(round1.Name);
+            Round round1 = new Round(10);
+            Round round2 = new Round(2);
+            Triangle triangle = new Triangle(1);
+            Triangle triangle1 = new Triangle(3);
+            Square square = new Square(9);
 
             Base[] figureObject = { round1, round2, triangle, triangle1, square };
 
